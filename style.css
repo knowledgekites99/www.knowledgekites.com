@@ -1,3 +1,6 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap');
+
 /* 🌐 Global Styles */
 * {
   box-sizing: border-box;
@@ -11,7 +14,6 @@ html {
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
   line-height: 1.6;
   background-color: #f4f7fb;
   color: #333;
@@ -32,8 +34,6 @@ header {
 .logo-section {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  text-align: left;
 }
 
 .logo {
@@ -53,9 +53,8 @@ header {
 
 nav {
   display: flex;
-  flex-wrap: wrap;
   gap: 1rem;
-  justify-content: center;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -82,12 +81,11 @@ section {
 
 .home {
   background: linear-gradient(180deg, #e8f1fb, #ffffff);
+  margin-bottom: 0.5rem; /* reduced spacing */
 }
 
 .home h2 {
   color: #0056b3;
-  font-size: 2rem;
-  margin-bottom: 1rem;
 }
 
 .image-grid {
@@ -99,8 +97,8 @@ section {
 }
 
 .image-grid img {
-  width: 100%;
-  max-width: 320px;
+  width: 30%;
+  min-width: 250px;
   border-radius: 20px;
   transition: transform 0.3s ease;
 }
@@ -113,7 +111,8 @@ section {
 .courses {
   background: linear-gradient(180deg, #ffffff, #f4f7fb);
   border-radius: 20px;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
+  margin-top: 0; /* remove extra top gap */
   text-align: center;
 }
 
@@ -140,10 +139,10 @@ section {
 .course-card.highlight {
   background: linear-gradient(135deg, #0078d7, #004a99);
   color: #fff;
-  border: none;
   box-shadow: 0 6px 18px rgba(0,0,0,0.2);
   border-radius: 16px;
   padding: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .course-card.highlight h4 {
@@ -167,10 +166,9 @@ section {
   transform: scale(1.05);
 }
 
-/* Grid for Upcoming Courses */
 .course-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
@@ -179,13 +177,9 @@ section {
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   padding: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: left;
   border-left: 6px solid #0078d7;
-}
-
-.course-card h4 {
-  color: #0078d7;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .course-card:hover {
@@ -194,33 +188,35 @@ section {
   border-left-color: #ffeb3b;
 }
 
-/* 👩‍🏫 Trainers Section */
+/* 👩‍🏫 Trainers */
 .trainers {
   background: linear-gradient(135deg, #0078d7, #004a99);
   color: #ffd54f;
   padding: 4rem 2rem;
   border-radius: 20px;
-  text-align: center;
+}
+
+.trainers h2 {
+  color: #ffeb3b;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
 .trainer-grid {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  flex-wrap: wrap;
   margin-top: 2rem;
 }
 
 .trainer-card {
   background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.3);
   padding: 1.5rem;
-  width: 280px;
   border-radius: 20px;
   text-align: center;
-  color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
 }
 
 .trainer-card:hover {
@@ -229,35 +225,110 @@ section {
   box-shadow: 0 6px 16px rgba(255,255,255,0.3);
 }
 
-/* 📞 Contact */
+/* 📞 Contact Section - Premium Glass UI */
 .contact {
-  background: linear-gradient(180deg, #ffffff, #eef3f9);
-  border-radius: 20px;
+  background: linear-gradient(180deg, #f9fbff, #eef3f9);
+  border-radius: 24px;
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 3rem auto;
+  backdrop-filter: blur(10px);
 }
 
 .contact h2 {
   color: #0056b3;
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 18px;
+  padding: 1.3rem 1.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 520px;
+  text-align: left;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 120, 215, 0.15);
+}
+
+.contact-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 120, 215, 0.2);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.contact-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+}
+
+.contact-info {
+  color: #0078d7;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info:hover {
+  color: #004a99;
+}
+
+/* “Follow Us” Section */
+.social-section h3 {
+  color: #004a99;
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: 1.2rem;
   flex-wrap: wrap;
 }
 
 .social {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   color: #0056b3;
+  background: linear-gradient(135deg, #ffffff, #f4f8ff);
+  border-radius: 30px;
+  padding: 0.7rem 1.4rem;
   text-decoration: none;
-  transition: transform 0.3s ease;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .social:hover {
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #0078d7, #0056b3);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 120, 215, 0.3);
 }
 
 .social img {
@@ -265,75 +336,54 @@ section {
   height: 22px;
 }
 
-/* 🦶 Footer */
+/* Footer */
 footer {
-  background: linear-gradient(90deg, #0056b3, #0078d7);
-  color: white;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  border-radius: 0 0 0 0;
+  padding: 1.5rem;
+  background: #0056b3;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
 }
 
-/* 📱 Responsive */
-@media (max-width: 1024px) {
+/* 📱 Responsive Design */
+@media (max-width: 900px) {
   header {
     flex-direction: column;
     text-align: center;
-    gap: 1rem;
   }
 
-  .logo-section {
+  nav {
     justify-content: center;
   }
-}
 
-@media (max-width: 768px) {
   .image-grid img {
-    width: 80%;
-    max-width: 350px;
+    width: 45%;
   }
 
-  .trainer-card {
-    width: 90%;
-  }
-
-  .course-card {
-    text-align: center;
-  }
-
-  .course-card h4 {
-    text-align: center;
+  .trainer-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 480px) {
-  body {
-    font-size: 0.95rem;
+@media (max-width: 600px) {
+  .logo {
+    height: 50px;
   }
 
   section {
     padding: 2rem 1rem;
   }
 
-  .logo {
-    height: 50px;
+  .image-grid img {
+    width: 90%;
   }
 
-  nav {
-    flex-direction: column;
-    gap: 0.5rem;
+  .trainer-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .course-grid {
     grid-template-columns: 1fr;
-  }
-
-  .trainer-card {
-    width: 100%;
-  }
-
-  .social-links {
-    flex-direction: column;
   }
 }

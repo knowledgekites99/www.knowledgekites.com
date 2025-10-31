@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Knowledge Kites - Fly High</title>
 
-  <!-- ✅ Google Font: Source Sans Pro -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
@@ -52,12 +52,19 @@
     <div class="course-wrapper">
       <!-- Active Course -->
       <div class="active-course">
-        <h3>Currently Active Course</h3>
+        <h3>Currently Active Courses</h3>
         <div class="course-card highlight">
           <h4>Artificial Intelligence (AI)</h4>
           <p>
             AI journey from ML foundations to advanced LLMs - including fine-tuning, chatbot creation,
             and cloud deployment using AWS Bedrock and SageMaker.
+          </p>
+          <button class="enroll-btn">Enroll Now</button>
+        </div>
+        <div class="course-card highlight">
+          <h4>DevOps with Multi Cloud</h4>
+          <p>
+            Learn to deploy and manage scalable applications across AWS, Azure, and Google Cloud, with hands-on training in containerization using Docker and Kubernetes, and infrastructure automation using Terraform.
           </p>
           <button class="enroll-btn">Enroll Now</button>
         </div>
@@ -69,27 +76,27 @@
         <div class="course-grid">
           <div class="course-card">
             <h4>Cybersecurity</h4>
-            <p>Master the skills to protect digital assets and networks from evolving cyber threats.</p>
+            <p><i>Master the skills to protect digital assets and networks from evolving cyber threats.</i></p>
           </div>
           <div class="course-card">
             <h4>Data Science</h4>
-            <p>Learn to analyze, visualize, and derive insights from data using Python and ML tools.</p>
+            <p><i>Learn to analyze, visualize, and derive insights from data using Python and ML tools.</i></p>
           </div>
           <div class="course-card">
             <h4>Full Stack Web Development</h4>
-            <p>Build modern, responsive web applications with HTML, CSS, JS, React, and Node.js.</p>
+            <p><i>Build modern, responsive web applications with HTML, CSS, JS, React, and Node.js.</i></p>
           </div>
           <div class="course-card">
             <h4>SAP</h4>
-            <p>Gain expertise in SAP modules for enterprise resource planning and business operations.</p>
+            <p><i>Gain expertise in SAP modules for enterprise resource planning and business operations.</i></p>
           </div>
           <div class="course-card">
             <h4>DevOps with AWS</h4>
-            <p>Automate, deploy, and monitor applications with AWS tools and CI/CD pipelines.</p>
+            <p><i>Automate, deploy, and monitor applications with AWS tools and CI/CD pipelines.</i></p>
           </div>
           <div class="course-card">
             <h4>Microsoft Dynamics 365</h4>
-            <p>Learn to manage business processes with Dynamics CRM and ERP systems.</p>
+            <p><i>Learn to manage business processes with Dynamics CRM and ERP systems.</i></p>
           </div>
         </div>
       </div>
@@ -107,6 +114,11 @@
       </div>
 
       <div class="trainer-card">
+        <h3>Tirumal Rao</h3>
+        <p>Service Delivery Manager @ Cognizant (U.S)</p>
+      </div>
+
+      <div class="trainer-card">
         <h3>Srinu Thupakula</h3>
         <p>Research Scholar @ Godavari Global University</p>
       </div>
@@ -120,11 +132,29 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p><strong>📞 Contact/ Whatsapp Number:</strong> +91-95732 93899</p>
-    <p><strong>📧 Email:</strong> info@knowledgekites.com</p>
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
 
+  <div class="contact-details">
+    <div class="contact-item">
+      <img src="phone-icon.png" alt="Phone" class="contact-icon">
+      <div>
+        <p><strong>Contact / WhatsApp:</strong></p>
+        <p class="contact-info">+91-95732 93899</p>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <img src="email-icon.png" alt="Email" class="contact-icon">
+      <div>
+        <p><strong>Email:</strong></p>
+        <p class="contact-info">info@knowledgekites.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="social-section">
+    <h3>Follow Us</h3>
     <div class="social-links">
       <a href="https://www.instagram.com/knowledgekites" target="_blank" class="social instagram">
         <img src="instagram-icon.png" alt="Instagram" /> Instagram
@@ -133,7 +163,8 @@
         <img src="linkedin-icon.png" alt="LinkedIn" /> LinkedIn
       </a>
     </div>
-  </section>
+  </div>
+</section>
 
   <footer>
     <p>www.knowledgekites.com</p>
